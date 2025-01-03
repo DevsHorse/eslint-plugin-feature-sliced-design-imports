@@ -126,8 +126,8 @@ ruleTester.run(
       },
       {
         name: 'From widgets to features',
-        filename: 'C:\\project\\src\\features\\ui\\Button',
-        code: "import { something } from '@/widgets/getCard';",
+        filename: 'C:\\project\\src\\features\\getCard\\ui\\Button',
+        code: "import { something } from '@/widgets/footer';",
         errors: [
           { messageId: 'incorrectLayerImport', type: 'ImportDeclaration' },
         ],
@@ -137,7 +137,7 @@ ruleTester.run(
       },
       {
         name: 'From pages to widgets',
-        filename: 'C:\\project\\src\\widgets\\ui\\Button',
+        filename: 'C:\\project\\src\\widgets\\footer\\ui\\Button',
         code: "import { something } from '@/pages/getCard';",
         errors: [
           { messageId: 'incorrectLayerImport', type: 'ImportDeclaration' },
@@ -148,8 +148,30 @@ ruleTester.run(
       },
       {
         name: 'From app to pages',
-        filename: 'C:\\project\\src\\pages\\ui\\Button',
+        filename: 'C:\\project\\src\\pages\\home\\Button',
         code: "import { something } from '@/app/getCard';",
+        errors: [
+          { messageId: 'incorrectLayerImport', type: 'ImportDeclaration' },
+        ],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'From pages to shared',
+        filename: 'C:\\project\\src\\shared\\ui\\BurgerMenu\\BurgerMenu',
+        code: "import { something } from '@/pages/privacy';",
+        errors: [
+          { messageId: 'incorrectLayerImport', type: 'ImportDeclaration' },
+        ],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'From entities to shared',
+        filename: 'C:\\project\\src\\shared\\ui\\Button',
+        code: "import { something } from '@/entities/user/model';",
         errors: [
           { messageId: 'incorrectLayerImport', type: 'ImportDeclaration' },
         ],
