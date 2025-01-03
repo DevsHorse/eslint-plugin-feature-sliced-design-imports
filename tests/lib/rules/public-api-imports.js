@@ -83,6 +83,14 @@ ruleTester.run(
           'feature-sliced-design-imports/alias': '@',
         },
       },
+      {
+        name: "Without currect file path",
+        code: "import { fetchData } from '@/services/api';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
     ],
 
     invalid: [

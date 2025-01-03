@@ -63,7 +63,7 @@ Then configure the rules you want to use under the rules section.
 ### 1. **`layer-imports`**
 
 ### **Purpose**
-This rule enforces strict import order between defined architectural layers (e.g., `app`, `shared`, `features`, `entities`, etc.) in a **feature-sliced design architecture**. It ensures that higher-level layers only import from allowed lower-level layers to maintain a clear dependency hierarchy.
+This rule enforces strict import order between defined architectural layers (e.g., `app`, `shared`, `features`, `entities`, etc.) in a **feature-sliced design architecture**. It ensures that higher-level layers only import from allowed lower-level layers to maintain a clear dependency hierarchy. The `proccess` layer isn't supported.
 
 ### **Key Features**
 - **Allowed Layers**: Each layer has a defined set of layers it can import from, based on the plugin configuration.
