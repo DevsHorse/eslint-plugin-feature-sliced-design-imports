@@ -1,11 +1,17 @@
 {
   "name": "eslint-plugin-feature-sliced-design-imports",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom ESLint plugin designed to enforce strict import rules in projects following the Feature-Sliced Design architecture.",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "feature-sliced-design",
+    "feature-sliced-design-imports",
+    "fsd",
+    "fsd-plugin",
+    "feature-sliced",
+    "eslint-plugin-fsd"
   ],
   "author": "devhorse",
   "main": "./lib/index.js",
