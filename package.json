@@ -53,5 +53,8 @@
   "peerDependencies": {
     "eslint": ">=8.57.0"
   },
+  "optionalDependencies": {
+    "minimatch": "^10"
+  },
   "license": "MIT"
 }
