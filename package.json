@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-feature-sliced-design-imports",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A custom ESLint plugin designed to enforce strict import rules in projects following the Feature-Sliced Design architecture.",
   "keywords": [
     "eslint",
