@@ -2,7 +2,7 @@
 
 Custom ESLint plugin designed to enforce strict import rules in projects following the [Feature-Sliced Design](https://feature-sliced.design/) architecture.
 
-### Version 1.1.0 - [What's New](https://github.com/DevsHorse/eslint-plugin-feature-sliced-design-imports/blob/main/VERSIONS_DETAILS.md)
+### [Versions](https://github.com/DevsHorse/eslint-plugin-feature-sliced-design-imports/blob/main/VERSIONS_DETAILS.md)
 
 ---
 

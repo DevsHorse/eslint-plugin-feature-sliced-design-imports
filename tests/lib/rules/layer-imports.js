@@ -293,6 +293,12 @@ ruleTester.run(
           },
         },
       },
+      {
+        name: 'Invalid filename path',
+        filename: 'C:\\project\\ui\\UserForm',
+        code: "import { Button } from '@/shared/ui/Button';",
+        errors: [],
+      }
     ],
 
     invalid: [

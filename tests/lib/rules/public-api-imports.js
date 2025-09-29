@@ -84,7 +84,7 @@ ruleTester.run(
         },
       },
       {
-        name: "Without currect file path",
+        name: 'Without currect file path',
         code: "import { fetchData } from '@/services/api';",
         errors: [],
         settings: {
@@ -98,7 +98,9 @@ ruleTester.run(
         errors: [],
         settings: {
           'feature-sliced-design-imports/alias': '@',
-          'feature-sliced-design-imports/ignoreImports': ['entities/user/model'],
+          'feature-sliced-design-imports/ignoreImports': [
+            'entities/user/model',
+          ],
         },
       },
       {
@@ -170,6 +172,12 @@ ruleTester.run(
         settings: {
           'feature-sliced-design-imports/alias': '@',
         },
+      },
+      {
+        name: 'Invalid filename path',
+        filename: 'C:\\project\\ui\\UserForm',
+        code: "import { Button } from '@/shared/ui/Button';",
+        errors: [],
       },
     ],
 
@@ -297,7 +305,9 @@ ruleTester.run(
         ],
         settings: {
           'feature-sliced-design-imports/alias': '@',
-          'feature-sliced-design-imports/ignoreImports': ['entities/message/model'],
+          'feature-sliced-design-imports/ignoreImports': [
+            'entities/message/model',
+          ],
         },
       },
       {

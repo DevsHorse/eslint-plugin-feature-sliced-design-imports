@@ -1,5 +1,10 @@
 # Versions
 
+# 1.1.1
+- Fixed TypeError thrown by micromatch library when processing 
+incorrect path formats
+
+
 # 1.1.0
 
 ### 🚀 New Features
