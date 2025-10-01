@@ -234,6 +234,60 @@ ruleTester.run(
         filename: 'C:\\project\\ui\\UserForm',
         code: "import { Button } from '@/shared/ui/Button';",
         errors: [],
+      },
+      {
+        name: 'Relative import in non-FSD folder (i18n)',
+        filename: 'C:\\project\\src\\i18n\\locales\\en',
+        code: "import { ru } from '../locales/ru';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'Relative import from non-FSD folder to another non-FSD folder',
+        filename: 'C:\\project\\src\\i18n\\config',
+        code: "import { locales } from '../utils/index';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'Absolute import in non-FSD folder (i18n)',
+        filename: 'C:\\project\\src\\i18n\\config',
+        code: "import { locales } from '@/i18n/locales';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'import in non-FSD folder from FSD folder',
+        filename: 'C:\\project\\src\\i18n\\config',
+        code: "import { locales } from '../shared/config/locales';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'import in FSD folder from non-FSD folder',
+        filename: 'C:\\project\\src\\shared\\config',
+        code: "import { locales } from '../18n/config/locales';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
+      },
+      {
+        name: 'Cross "folder" relative import in non-FSD folders (i18n to utils)',
+        filename: 'C:\\project\\src\\i18n\\config\\i18n',
+        code: "import { format } from '../../utils/helpers/format';",
+        errors: [],
+        settings: {
+          'feature-sliced-design-imports/alias': '@',
+        },
       }
     ],
 
